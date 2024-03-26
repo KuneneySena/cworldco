@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"5a47cda728",applicationID:"55961305"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self' api-l.hosco.com api-t.hosco.pro api-r.hosco.com api-v.hosco.pro files.hosco.com;
+            frame-src *;
+            base-uri 'self';
+            form-action 'self' *.facebook.com *.youtube.com;
+            img-src * blob: data:;
+            media-src *;
+            style-src 'self' 'unsafe-inline' api-l.hosco.com api-t.hosco.pro api-r.hosco.com api-v.hosco.pro files.hosco.com fonts.googleapis.com maxcdn.bootstrapcdn.com tagmanager.google.com;
+            font-src 'self' api-l.hosco.com api-t.hosco.pro api-r.hosco.com api-v.hosco.pro files.hosco.com fonts.googleapis.com fonts.gstatic.com maxcdn.bootstrapcdn.com *.intercomcdn.com;
+            script-src 'self' 'unsafe-inline' api-l.hosco.com api-t.hosco.pro api-r.hosco.com api-v.hosco.pro files.hosco.com www.google.com *.googletagmanager.com tagmanager.google.com
+                *.google-analytics.com *.googleadservices.com googleads.g.doubleclick.net *.googleapis.com cdn.amplitude.com
+                www.gstatic.com *.intercomcdn.com *.intercom.io wss://nexus-websocket-a.intercom.io snap.licdn.com *.youtube.com
+                *.facebook.net js-agent.newrelic.com *.nr-data.net static.ads-twitter.com analytics.twitter.com s.ytimg.com
+                bat.bing.com s.yimg.com sp.analytics.yahoo.com js.appboycdn.com jsv3.recruitics.com creativecdn.com cdnjs.cloudflare.com
+                js.hs-scripts.com js.hs-banner.com js.hs-analytics.net js.hscollectedforms.net
+                *.stripe.com consent.cookiebot.com consentcdn.cookiebot.com analytics.tiktok.com *.creativecdn.com;
+            connect-src 'self' api-l.hosco.com api-t.hosco.pro api-r.hosco.com api-v.hosco.pro files.hosco.com  cdn.hosco.com blob: *.google.com *.google-analytics.com *.googleapis.com
+                *.intercom.io  wss://nexus-websocket-a.intercom.io api.amplitude.com stats.g.doubleclick.net
+                *.facebook.com https://sdk.fra-01.braze.eu https://customer.fra-01.braze.eu s.yimg.com *.nr-data.net *.rollbar.com vimeo.com bat.bing.com
+                *.stripe.com googleads.g.doubleclick.net consent.cookiebot.com consentcdn.cookiebot.com pagead2.googlesyndication.com analytics.tiktok.com *.creativecdn.com;
+            child-src hosco.com www.hosco.com stats.g.doubleclick.net jsv3.recruitics.com creativecdn.com *.creativecdn.com
+                *.facebook.com *.youtube.com *.vimeo.com www.google.com *.stripe.com;
+        ">
+    
+    
+    <script>
+        dataLayer = [];
+        dataLayer.push({"profile_id":5576505,"profile_role":"member","access_type":"restricted","email":"stevekomla@gmail.com","visit_medium":"organic","visit_source":"Indeed","hosco_session":0});
+    </script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T4QJVT');
+</script>
+<!-- End Google Tag Manager -->
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width">
+    <meta name="google-site-verification" content="N9VEjQ9ZgaMyyETHzu7s9t1xobx4ojy0pAgkM0_n6yk" />
+
+    <link rel="icon" href="/favicon.ico?v=2022">
+
+    <meta property="fb:app_id" content="324532527599694">
+<meta name="description" content="Hosco Terms &amp; Conditions">
+<meta property="og:url" content="https://www.hosco.com/en/terms-and-conditions/">
+<meta property="og:title" content="Terms &amp; Conditions">
+<meta property="og:description" content="Hosco Terms &amp; Conditions">
+<meta property="og:image" content="https://cdn.hosco.com/hosco-social-link.png">
+<meta name="robots" content="index,follow">    <link rel="alternate" hreflang="x-default" href="https://www.hosco.com/en/terms-and-conditions/" /><link rel="alternate" hreflang="fr" href="https://www.hosco.com/fr/terms-and-conditions/" /><link rel="alternate" hreflang="es" href="https://www.hosco.com/es/terms-and-conditions/" /><link rel="alternate" hreflang="it" href="https://www.hosco.com/it/terms-and-conditions/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://files.hosco.com/cookiebot.css" rel="stylesheet" type="text/css" />
+
+    <title>Terms &amp; Conditions | hosco.</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://files.hosco.com/client/build/production/1-94fd5d948884e83a93c1.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://files.hosco.com/client/build/production/0-accf0000fd7e4c59206d.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://files.hosco.com/client/build/production/brand-39deee4eb71526b8afe2.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://www.hosco.com/en/terms-and-conditions/" rel="canonical">
+    
+    <script type="text/javascript" src="https://files.hosco.com/client/build/production/1-587fb13b2284e8f38c25.js"></script>
+<script type="text/javascript" src="https://files.hosco.com/client/build/production/0-8f7bf1a45fc099fa6942.js"></script>
+<script type="text/javascript" src="https://files.hosco.com/client/build/production/brand-9aaca203a02f9a14443a.js"></script>
+    <base href="/">
+</head>
+
+        <body ng-controller="BrandingController as $brandingCtrl">
+                <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4QJVT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->
+        <div id="wrapper" class="hosco-wrapper is-loggedin is-member">
+                                                
+<header id="header" class="hosco-navbar bg-white" ng-controller="HeaderController as $ctrl" ng-cloak>
+    <nav class="navbar navbar-expand-md navbar-light" >
+            <div class="logo-container">
+                    <a class="navbar-brand" href="/en/" hosco-tracking="{event: 'header-nav-interaction', label: 'hosco-logo'}">
+                <span class="sr-only">Hosco</span>
+            </a>
+                    </div>
+
+        <button class="navbar-toggler" ng-click="$ctrl.responsiveMenu = !$ctrl.responsiveMenu">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">Menu</span>
+            <span ng-if="!$ctrl.hasOnboardingStep('company-profile-item', 'company') || !$ctrl.hasOnboardingStep('account-details-item', 'company')
+                    || !$ctrl.hasOnboardingStep('home-item', 'company') || !$ctrl.hasOnboardingStep('jobs-item', 'company') || !$ctrl.hasOnboardingStep('members-item', 'company')
+                    || !$ctrl.hasOnboardingStep('company-account-switch', 'member') || !$ctrl.hasOnboardingStep('member-account-switch', 'company')" class="onboarding-indicator onboarding-indicator-header onboarding-indicator-hamburger"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" ng-class="{'responsive-menu': $ctrl.responsiveMenu}">
+                        <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/en/home/">
+                        Home                        <span ng-if="!$ctrl.hasOnboardingStep('home-item', 'company')" class="onboarding-indicator onboarding-indicator-header"></span>
+                    </a>
+                </li>
+                                <li class="nav-item">
+                                            <a class="nav-link" href="https://advice.hosco.com/en/">Advice</a>
+                                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.hosco.com/en/jobs">
+                            Jobs                            <span ng-if="!$ctrl.hasOnboardingStep('jobs-item', 'company')" class="onboarding-indicator onboarding-indicator-header"></span>
+                        </a>
+                    </li>
+                                                    <li class="nav-item courses">
+                        <a class="nav-link" href="/en/courses/">
+                            Courses                        </a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="/en/directory/companies">Companies</a>
+                </li>
+                                                                    <li class="nav-item">
+                        <a class="nav-link" href="/en/directory/members">
+                            Members                            <span ng-if="!$ctrl.hasOnboardingStep('members-item', 'company')" class="onboarding-indicator onboarding-indicator-header"></span>
+                        </a>
+                    </li>
+                                                                <li class="nav-item">
+                    <ul class="navbar-nav hosco-navbar-inline">
+                                                    <li class="nav-item icon-menu">
+                                <hosco-message-count>
+                                    <i class="fa fa-envelope-o"></i>
+                                </hosco-message-count>
+                            </li>
+                                                <li class="nav-item icon-menu">
+                            <hosco-notification>
+                                <i class="fa fa-bell-o"></i>
+                            </hosco-notification>
+                        </li>
+                                                    <li class="nav-item icon-menu">
+                                <hosco-connections>
+                                    <i class="fa fa-user-plus"></i>
+                                </hosco-connections>
+                            </li>
+                                                <li class="nav-item hosco-navbar-userdropdown dropdown-no-caret">
+                            <div uib-dropdown is-open="vm.open" ng-mouseenter="vm.open=true" ng-mouseleave="vm.open=false" class="dropdown dropdown-no-caret">
+                                <a href="/en/member/sena-akpably" class="thumb d-none d-lg-block">
+                                                                            <img src="https://www.hosco.com/images/assets/pictures/thumb-user-badge.png" />
+                                                                        <span ng-if="!$ctrl.hasOnboardingStep('company-profile-item', 'company') || !$ctrl.hasOnboardingStep('account-details-item', 'company')" class="onboarding-indicator onboarding-indicator-header"></span>
+                                </a>
+                                <div class="thumb d-xs-block d-lg-none" aria-expanded="false">
+                                    <span class="" hosco-href="/en/member/sena-akpably"><img src="https://www.hosco.com/images/assets/pictures/thumb-user-badge.png" /></span>
+                                    <span ng-if="!$ctrl.hasOnboardingStep('company-profile-item', 'company') || !$ctrl.hasOnboardingStep('account-details-item', 'company')
+                                            || !$ctrl.hasOnboardingStep('member-account-switch', 'company') || !$ctrl.hasOnboardingStep('company-account-switch', 'member')" class="onboarding-indicator onboarding-indicator-header"></span>
+                                    <button class="btn btn-xs dropdown-toggle" uib-dropdown-toggle><i class="fa fa-caret-down fa-2x"></i></button>
+                                </div>
+                                <div uib-dropdown-menu role="menu" class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="/en/member/sena-akpably">
+                                        <i class="fa fa-user fa-fw"></i> Profile                                        <span ng-if="!$ctrl.hasOnboardingStep('company-profile-item', 'company')" class="onboarding-indicator onboarding-indicator-dropdown"></span>
+                                    </a>
+                                                                        <a class="dropdown-item" href="/en/settings/account">
+                                        <i class="fa fa-cogs fa-fw"></i> Account details                                        <span ng-if="!$ctrl.hasOnboardingStep('account-details-item', 'company')" class="onboarding-indicator onboarding-indicator-dropdown"></span>
+                                    </a>
+                                    <a class="dropdown-item" data-new="new" ng-class="{new: true}" href="/en/settings/notifications">
+                                        <i class="fa fa-bell fa-fw"></i> Email notifications                                    </a>
+                                                                                                                                                                                                                                                                                                                                        <a class="dropdown-item" href="/en/advertise-jobs">
+                                            <i class="fa fa-plus-circle fa-fw blue"></i> Create a company account                                        </a>
+                                                                        <a class="dropdown-item" href="/en/auth/logout" hosco-tracking="{event: 'logout', label: 'logout button'}">
+                                        <i class="fa fa-unlock fa-fw"></i> Logout                                    </a>
+                                    
+                                                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+                                <email-verification-message></email-verification-message>
+                <main class="hosco-content-container">
+                    
+                    
+<div
+    class="hosco-brand"
+    home-header-transition
+    home-sidebars-transition
+>
+    <hosco-back-to-top offset="200"></hosco-back-to-top>
+    <div id="main-title">
+  <div class="content">
+    <h1>Terms of Use</h1>
+  </div>
+</div>
+<div id="content">
+  <section class="privacy-policy">
+    <p><em style="color:#0099da;">Last update 04.03.2020</em></p>
+
+    <h3 id="ownership">1- OWNERSHIP OF THE WEBSITE, ACCEPTANCE AND UPDATES OF THE TERMS OF USE.</h3>
+    <p>1. Welcome to Hospitality Connection (hereinafter referred to as "Hosco", the "Company", the "Site" or the "Platform").</p>
+    <p>2. The owner of the website www.hosco.com is the company Hospitality Connection Barcelona, S.L. (hereinafter referred to as "Hosco"), C/Roger de Flor 221, local, 08025 Barcelona, Spain with identification number N.I.F. B-67128876.</p>
+    <p>3. You can contact Hosco via email at info@Hosco.com</p>
+    <p>4. Hosco is the world's leading hospitality network and connects the world's best talent with the world's best hospitality brands and schools. We are a partner to our members throughout their careers in the world's fastest growing industry.</p>
+    <p>5. By registering on Hosco and using the Site, you are entering into a legally binding agreement with Hospitality Connection Barcelona, S.L. C/Roger de Flor 221, local, 08025 Barcelona, Spain based on the terms of this Use and the Hosco <a href="/en/privacy-policy/">Privacy Policy</a>, and becoming a Hosco user ("User").</p>
+    <p>6. If you are using Hosco on behalf of a school or company, our relationship may be governed by this Agreement as well as an additional separate agreement.</p>
+    <p>7. If you do not wish to become a User of Hosco, please do not click on "Join us" or "Register" and do not access, view or use any Hosco webpage or service. Any use you make of the Site or related services confirms your acceptance of, and agreement to be bound, by the present Terms of Use and our "Privacy Policy".</p>
+    <p>8. The Company may amend or modify these Terms of Use at any time. We consequently encourage you to check the Site periodically for any changes or updates. In any case, we will contact you to communicate any modifications which substantially affect the contents of these Terms of Use.</p>
+    <p>Therefore, you should periodically visit this page and review the most up-to-date version of the "Terms of Use".</p>
+
+    <h3 id="description">2- DESCRIPTION OF SERVICES</h3>
+    <p>Hosco provides a variety of online services to Users, including but not limited to:</p>
+    <p>(i) My Home: A homepage for all Users, with the Platform and most recent updates.</p>
+    <p>(ii) Job Offers: A directory of all active offers posted by employers of the Hosco community. Jobs can also be posted by alumni or career centres of specific schools holding a First subscription.</p>
+    <p>(iii) My Profile: A personalized page for each User of the Platform (members, companies and schools). Content of the information contained on this page may be customized by the User at any time.</p>
+    <p>(iv) Directory: A directory of all members, companies, and schools participating in the Hosco community.</p>
+    <p>(v) My Inbox: An internal messaging system for Hosco Users to interact and make/receive spontaneous applications.</p>
+
+    <h3 id="conditions">3- CONDITIONS OF USE AND PROPER USE OF HOSCO</h3>
+    <p>3.1 Hosco may be accessed and used by:</p>
+    <p>(i) Recruiters and company managers looking to connect with and hire top talents from the hospitality industry, after having selected a membership type and paid all related potential fees due to Hosco.</p>
+    <p>(ii) Staff from the participating schools, after the respective schools have entered into a formal collaboration agreement with Hosco, to interact with other Users and manage their placement and engagement strategies of both students and alumni on the Platform.</p>
+    <p>(iii) Top talents from the hospitality industry, to connect with other members or companies and find internships or permanent positions.</p>
+    <p>3.2. You agree to use the Hosco platform according to what is established in the present Terms of use and not engage in any of the following prohibited activities:</p>
+    <ul>
+      <li>Copy, modify, host, stream, sublicence, or resell the Hosco services.</li>
+      <li>Enable or allow others to use the Services using your account information.</li>
+      <li>Impersonate another person or otherwise misrepresent your affiliation with a person or entity, engage in any fraudulent action, hide or attempt to hide your identity.</li>
+      <li>Use the Services to build any kind of database or for any commercial solicitation purpose.</li>
+      <li>Collect or store personal data about other users in connection with any of the prohibited conduct and activities set forth above.</li>
+      <li>Use any data mining or similar data gathering and extraction methods in connection with the Services.</li>
+      <li>Access or attempt to access the Services by any means other than the interface we provided or authorized.</li>
+      <li>Upload or share any content that is illegal, unlawful, harmful, threatening, abusive, tortious, defamatory, libellous, part of a crime or illegal activity, violating anyone´s privacy or hateful.</li>
+      <li>Attempt to disable, impair, harm or destroy the Services.</li>
+      <li>Upload, post, transmit, or otherwise make available any content that infringes any patent, trademark, trade secret, copyright or other proprietary rights of any party.</li>
+      <li>Publish any person´s identification documents or sensitive financial information, or any personal information of third parties without their consent.</li>
+      <li>Upload, post, transmit, or otherwise make available any content, that you do not have a right to make available under any law or contractual relationship.</li>
+    </ul>
+    <p>You further warrant that:</p>
+    <ul>
+      <li>You have not been prohibited from having a Hosco account</li>
+      <li>You are not a competitor of Hosco nor using the Platform for reasons that are in competition with Hosco (the Site may not be used or linked to by third-party recruiters or by any party charging a fee for access to this Site or any information comprised in this Site)</li>
+      <li>You are not already registered on Hosco (only one account is permitted at a given time)</li>
+      <li>You have full power and authority to enter into these "Terms of Use" and not violating any other agreement to which you are a party, and not violating any rights of Hosco.</li>
+    </ul>
+    <p>3.4. Hosco reserves the right to deny access to the Platform for any or no reason. Additionally, Hosco reserves the right to expel Users and prevent their future registration on the Site for violating these Terms of Use or the law.</p>
+
+    <h3 id="obligations">4- OBLIGATIONS OF USERS</h3>
+    <p>4.1. To use the Site, you must agree to be bound by the "Terms of Use" and comply with all applicable laws.</p>
+    <p>4.2. You declare that you are of legal age to enter into this Agreement and that you are fully competent and have the legal capacity to enter into this Agreement.</p>
+    <p>4.3. You declare that all the data, information and contents you provide are accurate and up-to-date.</p>
+    <p>4.4. You own and are responsible for all the information you provide and post on Hosco. You may request its deletion at any time, unless you have shared content or information with others and they have not deleted it, or it was copied or stored by other Users. By providing information to Hosco, you represent and warrant that you are entitled to submit such information that it is accurate and updated and representative of your own profile or resume, education and work backgrounds/your company or hotel school. Users will only submit and post content or information on Hosco which is related to the lawful purposes of the Site as referred in Section 3 of these "Terms of Use".</p>
+    <p>4.5. It is your responsibility to use the search criteria available on the Site to filter the Users' network and job offers. You agree to use such criteria in a manner that complies with all applicable laws and regulations.</p>
+    <p>4.6. You must not submit content that is false, abusive, obscene, indecent, harmful, hateful, or that might be construed as harassment, that could embarrass anyone, or could motivate unlawful conduct.</p>
+    <p>4.7. You must not delete or modify any material posted by any other User on the Platform.</p>
+    <p>4.8. You must not collect, use, or share any content or information on Hosco Users, except as expressly permitted in the "Terms of Use" or by the user of such content or information.</p>
+    <p>4.9. You must not add content to a content field that is not intended for such field on Hosco (including but not limited to personally identifiable information: telephone number, first and/or last name, email addresses, street addresses).</p>
+    <p>4.10. You must not upload a symbol, drawing or any content other than a head-shot photograph of yourself for your personal profile photo.</p>
+    <p>4.11. You must not upload a symbol, drawing or any content not directly related to your organization in your organization profile photos and logo.</p>
+    <p>4.12. You must not rent, lease, trade or sell/resell access to Hosco or any content and information therein.</p>
+    <p>4.13. You must not communicate, share or distribute content or information of Hosco and its Users with third parties found on the Hosco Platform and/or of its Users.</p>
+    <p>4.14. You must not include, refer, or manage more than one job vacancy per offer you post on the Platform (doing so will incur additional charges).</p>
+    <p>4.15. You must not post, upload, transmit, or share any content that contains viruses or that can damage the Platform or affect any Hosco User.</p>
+    <p>4.16. You must not violate or attempt to violate the security, efficiency, or integrity of the Site in any way.</p>
+    <p>4.17. You must not post or transmit any unsolicited advertising, promotional material, "spam", junk mail, or any solicitation without the prior written consent of Hosco.</p>
+    <p>4.18. You must not create, either manually or electronically, a database with information and content posted on Hosco.</p>
+    <p>4.19. You own and are responsible for keeping your password and login details secure and confidential. You are responsible for anything that occurs through your account on the Platform until you cancel it or prove that your account security was compromised with no fault of your own. No User shall create more than one account on Hosco without prior written consent of Hosco.</p>
+
+    <h3 id="information">5- USER INFORMATION</h3>
+    <p>5.1. You agree and acknowledge that Hosco may access, store, and disclose any information you provide when you register (or ask to get registered) or use the Site, if required by law or in a good faith belief that it is necessary for legal purposes to enforce this Agreement, respond to claims of violation of the rights of third parties, respond to customer service inquiries or protect the rights, property or security of Hosco, our Users, or the public.</p>
+    <p>5.2. Users can edit, at any time, the content and information they post on the Site, including but not limited to their resume, company profile, photos, news and postings, attachments, links, feeds and job offers. The Users can also edit the visibility of such content and information by the distinct user types of the Site. All information that you provide to us is protected under and subject to our "Privacy Policy", which is published and available on this Site (<a href="/en/privacy-policy/">Privacy Policy</a>).</p>
+    <p>5.3. For hotels and schools, you grant the right to Hosco to mention the organization as a Hosco member/partner and to use or display your organization's name, logo or pictures on the Site. You further grant to Hosco the right to use or display your organization's name, logo or pictures in promotional materials.</p>
+
+    <h3 id="communications">6- USER COMMUNICATIONS AND POSTS</h3>
+    <p>6.1 The Platform has been designed for employers, hotel schools, members and alumni to easily interact and find jobs/candidates. Communications between the parties may not be initiated for any reason except those directly related to this purpose. However, Users acknowledge that there are risks in dealing and communicating with strangers and agree and assume all risks associated with such dealing and communications linked to their use of the Site.</p>
+    <p>6.2 Hosco offers Users various ways of posting information, files, links, updates, news, social media feeds, observations and comments, such as the homepage "My Home" or the Attachment and Other sections of the Users profiles on the Site. Hosco cannot guarantee that other Users will not access and use such content and information. Consequently, you must refrain from posting information on Hosco which you would like to keep confidential or which may infringe third-party rights. The Company cannot be held responsible for a User's use or appropriation of any content or other material you post on the Platform.</p>
+
+    <h3 id="privacy">7- PRIVACY AND COOKIES</h3>
+    <p>7.1. You should read carefully our "<a href="/en/privacy-policy/">Privacy Policy</a>" and must do it prior to joining the Platform, as it governs our processing of any and all information provided by you to Hosco. You acknowledge and agree that your submission of information or material is voluntary on your part.</p>
+    <p>7.2. Review our "<a href="/en/cookies-policy/">Cookies Policy</a>" which describes the purposes and types of cookies we use to enhance your experience.</p>
+
+    <h3 id="property"> 8- INTELLECTUAL AND INDUSTRIAL PROPERTY AND CONTENT REGULATIONS
+    </h3>
+    <p>8.1. You acknowledge and agree that all the contents of the Site, including, but not limited to, all information, data, text, software, sound, music, photographs, video, graphics, messages or other materials, may be protected by copyrights, trademarks, service marks, patents or other proprietary rights and laws.<br />Hosco is the holder of the intellectual and industrial property rights, or has obtained the corresponding authorizations or licenses required for exploiting the domain name, the trademarks and distinctive symbols, the contents published, including all texts and images, and the remaining works and inventions associated to the Site and the technology associated to the same, as well as with regard to the contents. These domain names, trademarks, distinctive symbols, contents, remaining works and inventions cannot be used, reproduced or copied in any way without the previous explicit permission in writing of Hosco.</p>
+    <p>8.2. The ownership of all the contents, replies, and comments added by Users on the Hosco Platform belongs to their corresponding authors.</p>
+    <p>8.3. The User agrees that all the contents and information added on the Hosco Platform will be published and will be freely available to the rest of the users of the Hosco Platform without any limitation.</p>
+    <p>8.4. The User declares and/or warrants that it owns all rights to publish the User´s contents on the Site, and thereby authorizes Hosco to communicate to the public, use, and exploit the publication in the format that Hosco shall deem adequate without any temporal or territorial restrictions.</p>
+    <p>8.5. The Hosco Platform compiles and displays the content and information posted and transmitted by its Users and Hosco cannot be held responsible for the consequences of such postings and transmissions. Hosco does not preview, review, edit or monitor the content submitted by the Users on the Platform. Consequently, the Users acknowledge that any reliance whatsoever on any material or communication posted or transmitted by other Users is at their own risk.</p>
+    <p>8.6. Hosco reserves the right (but shall have no obligation) to remove, or reject any content or communication submitted by any User on the Platform for any reason, at any time and without notice. Any such decision by Hosco shall not be subject to negotiation, debate or refund.</p>
+    <p>8.7. Hosco cannot be held responsible or liable for the content, material and references of third party websites provided on the Platform. Any concern regarding such content, material and any other reference should be directly addressed to the third party.</p>
+
+    <h3 id="payments">9- PAYMENTS</h3>
+    <p>9.1. All payable fees to Hosco are presented to you within the Site and/or sent to you via email. The prices shown on the website or via email are expressed in the currency stated at the time of the purchase and include taxes which are applicable at all times and by territory unless clearly stated otherwise.</p>
+    <p>9.2. The fees are directly payable by credit card or within thirty days following the date of the Hosco invoice. The purchased service (credits or premium membership subscriptions) will not take full effect until the payment of the invoice is received by Hosco. Invoices are sent based on the price valid at the time of the order or the price agreed between the parties. Hosco reserves the right to modify its pricing policy while the relationship is ongoing.</p>
+    <p>9.3. Hosco does not have access to bank information related to the means of payment and does not know or keep data during the payment transaction.</p>
+    <p>Hosco has no obligation to refund any amounts in any circumstances, unless otherwise stated in these "Terms of Use" or agreed in writing with the Company.</p>
+    <p>9.4. Self-Service Payment and Invoicing</p>
+    <p>Invoicing</p>
+    <p>Users have the right to request the invoice by sending a written communication to Hosco at administrative@hosco.com.</p>
+    <p>Online Purchases</p>
+    <p>Hosco reserves the right to reject any online purchase order submitted by the User in case of reasonable suspicion of fraudulent or criminal activity concerning the use of Hosco's products and services.</p>
+    <p>Right of Withdrawal</p>
+    <p>You will not be able to exercise your withdrawal right if the performance of the purchased services has begun (e.g., if you purchase a Job Posting and Hosco activates the service), upon consent and acknowledgment that you thereby lose your withdrawal right.</p>
+
+    <h3 id="termination">10- TERM AND TERMINATION</h3>
+    <p>10.1. As a member, if you have free access to our platform, you may terminate your use of the Site and this Agreement for any or no reason and at any time, with written notice to Hosco. Your decision will become effective when Hosco processes your written notice. If you are using Hosco on behalf of a school or company, our relationship may be governed by this Agreement as well as any additional accepted agreements.</p>
+    <p>10.2. Hosco may terminate your use of the Site and this Agreement for any or no reason, including, but not limited to, a violation of these "Terms of Use" or your failure to pay any fees due to the Company, at any time, and with no compulsory prior notice.</p>
+    <p>10.3. Termination of your Hosco account includes disabling your access to the Platform and may also prevent you from any future potential use of the Platform.</p>
+    <p>10.4. Hosco may also discontinue providing the Site or any part of the Site at its sole discretion, at any time and with or without prior notice. In such event, you agree that Hosco may deactivate or delete your account and related content/information and that all fees and other amounts paid to the Company are non-refundable, except as otherwise defined in these "Terms of Use" or in any written consent provided by Hosco.</p>
+    <p>10.5. For companies and schools, in the event of a termination by Hosco for any reason other than breach by you of these "Terms of Use" and of the law, any prepaid fees for unused services will be reimbursed to you.</p>
+    <p>10.6. For companies, the term of this agreement related to paid services commences upon the effective purchase date and expiration is subject to the service duration you select. Unless Hosco is otherwise notified to the contrary, the agreement will automatically be renewed with the same services than the preceding year. If the prices or other conditions were to change, Hosco will inform you accordingly. If you do not wish to renew your contract, you need to inform Hosco using a written form (post, email) at least 90 days (unless your contract states contrarily) before the contract expires for companies and for schools.</p>
+    <p>Second and successive Renewal Periods: The Rate Card Price shall be revised at the beginning of each Renewal Period with a maximum increase of 5% year over year. Hosco shall notify the Client of such changes by giving written notice thirty-seven (37) days prior to the expiry of the then current Renewal Period.</p>
+    <p>10.7. For companies, the term of this agreement related to the purchase of Job Posting/s commences upon the effective purchase date and your posting can be posted to recruit one position at any time on the website visible up to 90 days.</p>
+    <p>10.8. For companies, the one-off purchase of extra Job Posting/s on top of the agreed current subscription will be based on Hosco's Single Job Posting standard pricing. For companies who need to upgrade their package in order to include more job postings, the price applied per extra job postings will remain the same as per current negotiated contract.</p>
+
+    <h3 id="warranties">11- DISCLAIMER OF WARRANTIES</h3>
+    <p>11.1. You agree and acknowledge that the Site and all information and services are provided on an "as is" and "as available" basis without any express warranties or representations.</p>
+    <p>11.2. Hosco is not responsible and makes no representations or warranties that the Site and its services meet your expectations, that it functions without interruption or error in functioning. Hosco disclaims all liability for damages caused by and such interruption or error in functioning. Furthermore, Hosco disclaims all liability for any malfunctioning, impossibility of access or poor use conditions of the Platform due to inappropriate equipment, disturbances related to internet service providers or to the saturation of the internet network, and for any other reason.</p>
+    <p>11.3. Hosco makes no warranty that the Site or any server through which you access the Platform is free of viruses or other harmful components. Any content or material downloaded or obtained through the use of the Site is at your own discretion and risk and you are solely responsible for any damage to your computer system or loss of data that results from the download of such content or material.</p>
+    <p>11.4. Hosco makes no representations or warranties that there will be any minimum number of users with resumes or companies with job offers on the Platform, and that the information disclosed by the users with resumes or companies with job offers is accurate, up-to-date and reliable.</p>
+    <p>11.5. Hosco makes no representations or warranties that any resume, job posting, news document, advertisement or other content or communication will be viewed by a minimum or defined number of users or by any specific user, and that your requirements or expectations on the quantity or quality of job applicants will be met.</p>
+
+    <h3 id="liability">12- LIMITATION OF LIABILITY</h3>
+    <p>12.1. Hosco will implement all technical and organizational security measures that are required in accordance with security standards, but it shall not be held liable for any third party attacks of a criminal nature and those that are beyond its control.</p>
+
+    <h3 id="misc">13- MISCELLANEOUS</h3>
+    <p>13.1. Any requests or inquiries on these "Terms of Use" should be directed to us through our contact form found in the "Contact" section of the Site.</p>
+    <p>13.2. These "Terms of Use" constitute the entire agreement between the parties and prevail over any previous agreement or arrangement.</p>
+    <p>13.3. These "Terms of Use" are governed and construed in accordance with Spanish laws, regardless of the country of origin of the User. Any disagreement will be treated by the competent tribunals of the canton of Barcelona or the applicable jurisdiction in the case of consumers.</p>
+    <p>13.4. If any section of these "Terms of Use" is held invalid or unenforceable, that part shall be construed in a consistent way with applicable laws to reflect the initial and original intentions of the parties and the remaining sections and parts shall remain in full force and effect.</p>
+
+    <h3 id="hosconnect-events">14- HOSCONNECT EVENT</h3>
+    <h4>14.1. DEFINITION</h4>
+    <p>Hosconnect events are exclusive events that are held on a monthly basis. They bring quality hospitality professionals and schools together for evenings of intimate networking in stunning, local venues. <a href="https://meet.hosco.com/hosconnect/"   >https://meet.hosco.com/hosconnect/</a ></p>
+    <h4>14.2. PHOTOS POLICY</h4>
+    <p>Photos and videos will be taken during the Hosconnect events. These photos and/or video footage will be shared on hosco.com and other communication channels managed by Hosco.<br /><br /> If you don't grant Hosco permission to use the photographs and/or video footage taken of you during the event, please send an email to pr@hosco.com. Please make sure you state: Image release, the name of the event, and your full name in the subject line of your email. Ex: Image release, Hosconnect Geneva, James Smith.</p>
+    <h4>14.3. CONDITIONS</h4>
+    <p>Hosco reserves the right to refuse entry to any Hosco event.</p>
+
+    <h3 id="hoscosummit-events">15- HOSCO SUMMIT EVENT</h3>
+    <h4>15.1. DEFINITION</h4>
+    <p>The Hosco Summit takes place every June in Barcelona. The world's top hospitality school representatives and HR professionals from first-class companies unite for three days of networking and learning. The attendees exchange best practices, hear from industry figures, and make endless connections. The overall goal is to unite industry stakeholders and tackle some of the biggest challenges that hospitality is currently facing. <a href="https://meet.hosco.com/">https://meet.hosco.com/</a></p>
+    <h4>15.2. PHOTOS POLICY</h4>
+    <p>Photos and videos will be taken during the Hosco Summit. These photos and/or video footage will be released on an album on hosco.com and use to share information about Hosco Summit on other communication channels managed by Hosco. If you don't grant permission to Hosco to use the photographs and/or video images taken of me during the event, please send an email to pr@hosco.com. Please make sure you state: Image release, the name of the event, and your full name in the subject line of your email. Ex: Image release, Hosco Summit 2020, James Smith.</p>
+    <h4>15.3. CANCELLATION POLICY</h4>
+    <p>Should you have to cancel your registration, a notification in writing should be sent to pr@hosco.com. Please make sure you state: cancelation, name of the event, and your full name in the subject line of your email. Ex: Cancelation, Hosco Summit, James Smith.</p>
+    <p>Conditions for regular schools & companies (included, but not limited to Hosco clients and non-clients):</p>
+    <ul>
+      <li>A refund of 75% will be given for cancellations received 210 days (7 months) prior to the start of the event.</li>
+      <li>A refund of 50% will be given for cancellations received between 210 days (7 months) and 60 days (2 months) prior to the start of the event.</li>
+      <li>No refund will be issued for cancellations received less than 60 days (2 months) prior to the event, nor failure to attend.</li>
+    </ul>
+    <p>Conditions for sponsors:</p>
+    <ul>
+      <li>A refund of 75% will be given for cancellations received 210 days (7 months) prior to the start of the event.</li>
+      <li>A refund of 50% will be given for cancellations received between 210 days (7 months) and 60 days (2 months) prior to the start of the event.</li>
+      <li>No refund will be issued for cancellations received less than 60 days (2 months) prior to the event, nor failure to attend.</li>
+      <li>However, any expenses generated because of the service should be supported fully by the part that cancels.</li>
+    </ul>
+
+    <h4>15.4. OTHER CONDITIONS</h4>
+    <p>View the <a href="https://meet.hosco.com/terms_and_conditions_hoscosummit2020">Hosco Summit 2020's Terms & Conditions here</a>.</p>
+    <p>Hosco reserves the right to refuse entry to any Hosco event.</p>
+  </section>
+</div>
+</div>
+
+                                            
+<nav aria-label="breadcrumb" class="site-breadcrumb">
+    <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                                    <a href="/en/">
+                        Home                    </a>
+                            </li>
+                    <li class="breadcrumb-item active">
+                                    <span>Terms &amp;amp; Conditions</span>
+                            </li>
+            </ol>
+</nav>
+                    
+                </main>
+            
+                                                
+<footer id="footer" class="hosco-new-footer">
+    <div class="hosco-new-footer-container">
+        <div class="hosco-new-footer-nav row">
+            
+                            <div class="col-6 col-sm-3 hosco-new-footer-list">
+                                            <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Top Locations'}" href="/en/browse-jobs/location" class="hosco-new-footer-title">Top Locations</a>
+                    
+                                            <ul class="list-unstyled">
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs in Abu Dhabi'}" href="https://www.hosco.com/en/jobs/in/abu-dhabi" class="hosco-new-footer-nav-link">Jobs in Abu Dhabi</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs in Amsterdam'}" href="https://www.hosco.com/en/jobs/in/amsterdam" class="hosco-new-footer-nav-link">Jobs in Amsterdam</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs in Dubai'}" href="https://www.hosco.com/en/jobs/in/dubai" class="hosco-new-footer-nav-link">Jobs in Dubai</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs in London'}" href="https://www.hosco.com/en/jobs/in/london" class="hosco-new-footer-nav-link">Jobs in London</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs in Manchester'}" href="https://www.hosco.com/en/jobs/in/manchester" class="hosco-new-footer-nav-link">Jobs in Manchester</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                            <div class="col-6 col-sm-3 hosco-new-footer-list">
+                                            <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Top Departments'}" href="/en/browse-jobs/department" class="hosco-new-footer-title">Top Departments</a>
+                    
+                                            <ul class="list-unstyled">
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Events jobs'}" href="https://www.hosco.com/en/jobs/events" class="hosco-new-footer-nav-link">Events jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'F&B jobs'}" href="https://www.hosco.com/en/jobs/f-b" class="hosco-new-footer-nav-link">F&B jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Front Office jobs'}" href="https://www.hosco.com/en/jobs/front-office" class="hosco-new-footer-nav-link">Front Office jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Rooms division jobs'}" href="https://www.hosco.com/en/jobs/rooms" class="hosco-new-footer-nav-link">Rooms division jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Sales & Marketing jobs'}" href="https://www.hosco.com/en/jobs/sales-marketing" class="hosco-new-footer-nav-link">Sales & Marketing jobs</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                            <div class="col-6 col-sm-3 hosco-new-footer-list">
+                                            <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Top Companies'}" href="/en/browse-jobs/company" class="hosco-new-footer-title">Top Companies</a>
+                    
+                                            <ul class="list-unstyled">
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs at Accor'}" href="https://www.hosco.com/en/jobs/at/accor" class="hosco-new-footer-nav-link">Jobs at Accor</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs at Four Seasons'}" href="https://www.hosco.com/en/jobs/at/four-seasons" class="hosco-new-footer-nav-link">Jobs at Four Seasons</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs at Hilton Hotels & Resort'}" href="https://www.hosco.com/en/jobs/at/hilton-hotels-resort" class="hosco-new-footer-nav-link">Jobs at Hilton Hotels & Resort</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs at InterContinental'}" href="https://www.hosco.com/en/jobs/at/intercontinental" class="hosco-new-footer-nav-link">Jobs at InterContinental</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Jobs at Marriott'}" href="https://www.hosco.com/en/jobs/at/marriott" class="hosco-new-footer-nav-link">Jobs at Marriott</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                            <div class="col-6 col-sm-3 hosco-new-footer-list">
+                                            <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Top jobs'}" href="/en/browse-jobs/title" class="hosco-new-footer-title">Top jobs</a>
+                    
+                                            <ul class="list-unstyled">
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Chef jobs'}" href="https://www.hosco.com/en/jobs/chef" class="hosco-new-footer-nav-link">Chef jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Concierge jobs'}" href="https://www.hosco.com/en/jobs/concierge" class="hosco-new-footer-nav-link">Concierge jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Receptionist jobs'}" href="https://www.hosco.com/en/jobs/receptionist" class="hosco-new-footer-nav-link">Receptionist jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Sales executive jobs'}" href="https://www.hosco.com/en/jobs/sales-executive" class="hosco-new-footer-nav-link">Sales executive jobs</a>
+                                </li>
+                                                            <li>
+                                    <a hosco-tracking="{event: 'footer-nav-interaction', label: 'Waiter / Waitress jobs'}" href="https://www.hosco.com/en/jobs/waiter-waitress" class="hosco-new-footer-nav-link">Waiter / Waitress jobs</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                    </div>
+
+        <ul class="hosco-new-footer-about list-unstyled">
+            <li>
+                <a href="/en/about-us/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'About us'}" >About us</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/en/contact"  hosco-tracking="{event: 'footer-nav-interaction', label: 'Contact'}" >Contact</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/en/terms-and-conditions/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'Terms of use'}" >Terms of Use</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/en/cookies-policy/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'Cookies Policy'}" >Cookies Policy</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/en/privacy-policy/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'privacy policy'}" >Privacy Policy</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/en/members-faq/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'FAQ'}" >FAQ</a>
+            </li>
+                    </ul>
+
+        <h3 class="hosco-new-footer-title">Get the app</h3>
+        <div class="text-center hosco-new-footer-mobile-badge">
+            <a href="https://itunes.apple.com/app/hosco-hospitality-job-search/id1080703937?ls=1&mt=8"  hosco-tracking="{event: 'footer-nav-interaction', label: 'Apple Appstore'}" target="_blank" class="appstore">
+                <img src="/images/home/mobile/app-store-badge-en.png" height="30" alt="Available on the AppStore">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.hosco"  hosco-tracking="{event: 'footer-nav-interaction', label: 'Google Playstore'}" target="_blank" class="google-play">
+                <img src="/images/home/mobile/google-play-badge-en.png" height="30" alt="Get in on Google Play">
+            </a>
+        </div>
+        <div class="text-center hosco-new-footer-mobile-link">
+            <a href="/en/hospitality-hotel-job-app/"  hosco-tracking="{event: 'footer-nav-interaction', label: 'more information'}" >Hospitality Job App</a>
+        </div>
+
+        <h3 class="hosco-new-footer-title">Follow us</h3>
+        <ul class="hosco-new-footer-social clearfix list-unstyled">
+            <li>
+                <a href="/en/company/hosco"  hosco-tracking="{event: 'footer-social-interaction', label: 'Hosco'}" class="hosco-new-footer-social-hosco" target="_blank">
+                    <i class="ha ha-round-hosco"></i><span class="sr-only">hosco</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/hospitalityconnection" hosco-tracking="{event: 'footer-social-interaction', label: 'Facebook'}" class="hosco-new-footer-social-fb" target="_blank">
+                    <i class="ha ha-round-fb"></i><span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/HOSCOInfo" class="hosco-new-footer-social-twtt" hosco-tracking="{event: 'footer-social-interaction', label: 'Twitter'}" target="_blank">
+                    <i class="ha ha-round-twtt"></i><span class="sr-only">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/hosco" class="hosco-new-footer-social-linkd" hosco-tracking="{event: 'footer-social-interaction', label: 'Linkedin'}" target="_blank">
+                    <i class="ha ha-round-linkd"></i><span class="sr-only">Linkedin</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/hoscojobs/" class="hosco-new-footer-social-insta" hosco-tracking="{event: 'footer-social-interaction', label: 'Instagram'}" target="_blank">
+                    <i class="ha ha-round-insta"></i><span class="sr-only">Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCWO1YU4F7B_92kvyA55yAmg" class="hosco-new-footer-social-yt" hosco-tracking="{event: 'footer-social-interaction', label: 'Youtube'}" target="_blank">
+                    <i class="ha ha-round-yt"></i><span class="sr-only">Youtube</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="hosco-new-footer-copyright list-unstyled">
+            <li>&copy; 2022 Hosco</li>
+        </ul>
+    </div>
+</footer>
+                                    </div>
+
+        <script>
+(function() {
+    angular.module('Hosco.app')
+        .constant('_trackingSettings', {"profile_id":5576505,"profile_role":"member","access_type":"restricted","email":"stevekomla@gmail.com","visit_medium":"organic","visit_source":"Indeed","hosco_session":0})
+        .constant('STRIPE_PUBLIC_KEY', 'pk_live_9M8HmQpu2N6OHpH2mrL8yaZi')
+        .constant('_brazeSettings', {"app_id":"c37cece8-f2da-481f-a078-baf2fcba22d0","endpoint":"sdk.fra-01.braze.eu","profile_id":5576505})
+        .constant('BLP', '')
+        .constant('COOKIE_DOMAIN', '.hosco.com')
+        .constant('GLOBETROTTER_URL', 'https\x3A\x2F\x2Fapi\x2Dl.hosco.com\x2Fplaces\x2F')
+        .constant('CONNECTION_COUNT', 0)
+        .constant('NOTIFICATION_COUNT', 0)
+        .constant('INBOX_COUNT', 0)
+        .constant('API_VERSION', '1.15')
+        .constant('FACEBOOK_APP_ID', 324532527599694)
+        .constant('GOOGLE_API_KEY', 'AIzaSyDfhJXV4AXpFLIL2HMQGeJeDTuPEQaBNgA')
+        .constant('TRANSLATION_CDN_PATH', 'https\x3A\x2F\x2Ffiles.hosco.com\x2Ftranslations\x2Ffront')
+        .constant('LOCALE_ROUTE', 'en')
+        .run(['LoadTranslationsService', function(LoadTranslationsService) {
+            LoadTranslationsService.setLanguage("en_GB")
+        }])
+        .run(['\x24locale', function($locale) {
+            $locale.NUMBER_FORMATS.GROUP_SEP=","; $locale.NUMBER_FORMATS.DECIMAL_SEP=".";
+        }])
+        .run(['BrazeService', '_brazeSettings', function(BrazeService, _brazeSettings) {
+            BrazeService.boot(_brazeSettings)
+        }])
+        .value('_organization', null)
+        .value('_routes', {"doctrine_orm_module_yuml":"\/ocra_service_manager_yuml","authentication_login":"\/:locale\/auth\/:action","authentication_logout":"\/:locale\/auth\/logout","authentication_login_as":"\/:locale\/auth\/login-as\/:id[\/:administratorId]","authentication_switch_account":"\/:locale\/auth\/switch\/:slug","authentication_back_to_admin_account":"\/:locale\/auth\/back-to-admin-account","oauth_login":"[\/api\/:version]\/oauth[\/:action]","retrieve_password":"\/retrieve-password","retrieve_password_reset":"\/retrieve-password\/reset\/:token","api_retrieve_password":"\/api[\/:version]\/retrieve-password\/:action","api_login":"\/api[\/:version]\/auth\/:action","api_department":"\/api[\/:version][\/:locale]\/departments[\/:id]","api_jobtype":"\/api[\/:version][\/:locale]\/job-types[\/:id]","api_geographical_region":"\/api[\/:version]\/geographical-regions[\/:id]","api_durationrange":"\/api[\/:version]\/durations-ranges[\/:type]","api_country":"\/api[\/:version]\/countries","api_nationality":"\/api[\/:version]\/nationalities","api_calling_codes":"\/api[\/:version]\/calling-codes","api_work_eligibility":"\/api[\/:version]\/work-eligibilities","api_language":"\/api[\/:version][\/:locale]\/languages[\/:id]","api_localization":"\/api[\/:version]\/localizations","api_sector":"\/api[\/:version][\/:locale]\/sectors[\/:id]","api_parse":"\/api[\/:version]\/parse\/:action","api_search":"\/api[\/:version]\/search\/:action","api_me":"\/api[\/:version]\/me","api_avatar":"\/api[\/:version]\/avatar","api_identity":"\/api[\/:version]\/identity","api_applicationmethod":"\/api[\/:version]\/application-methods[\/:id]","api_jobseo":"\/api[\/:version]\/job-seo[\/:slug]","api_jobseo_hreflang":"\/api[\/:version]\/job-seo-hreflang[\/:slugs]","api_jobseo_departments_links":"\/api[\/:version]\/job-seo-departments-links","api_jobmanager":"\/api[\/:version]\/job-manager","api_company_registration":"\/api[\/:version]\/company-registration\/:action","api_jobstatus":"\/api[\/:version][\/:locale]\/job-status","api_experiencerequirement":"\/api[\/:version][\/:locale]\/experience-requirements","api_proxy":"\/api[\/:version]\/proxy[\/:slug]","api_register":"\/api[\/:version]\/register","api_register_step":"\/api[\/:version]\/register\/step","api_register_funnel":"\/api[\/:version]\/register\/funnel","api_register_abort":"\/api[\/:version]\/register\/abort","api_register_create_account":"\/api[\/:version]\/register\/create-account","api_register_facebook_signup":"\/api[\/:version]\/register\/facebook-signup","api_register_apple_signup":"\/api[\/:version]\/register\/apple-signup","api_register_linkedin_signup":"\/api[\/:version]\/register\/linkedin-signup","api_register_linkedin_experiences":"\/api[\/:version]\/register\/linkedin-experiences","api_company_register":"\/api[\/:version]\/company-register","api_company_register_create_account":"\/api[\/:version]\/company-register\/create-account","api_company_register_facebook_signup":"\/api[\/:version]\/company-register\/facebook-signup","api_company_register_linkedin_signup":"\/api[\/:version]\/company-register\/linkedin-signup","api_company_register_qualification":"\/api[\/:version]\/company-register\/qualification","api_company_register_contact":"\/api[\/:version]\/company-register\/contact","api_demo_request":"\/api[\/:version]\/demo-request","api_terms_agreement":"\/api[\/:version]\/terms-agreement","api_complete_signup":"\/api[\/:version]\/complete-signup","api_notifications":"\/api[\/:version]\/notifications[\/:page]","api_notifications_count":"\/api[\/:version]\/notifications[\/:page]\/count","api_notifications_unread_count":"\/api[\/:version]\/notifications[\/:page]\/unread-count","api_notifications_read":"\/api[\/:version]\/notifications[\/:page]\/read","api_notifications_read_all":"\/api[\/:version]\/notifications[\/:page]\/read-all","api_notifications_register_mobile_token":"\/api[\/:version]\/notifications[\/:page]\/token\/register","api_notifications_unregister_mobile_token":"\/api[\/:version]\/notifications[\/:page]\/token\/unregister","api_app_feedback":"\/api[\/:version]\/app-feedbacks","api_course_feedback":"\/api[\/:version]\/course-feedbacks","api_saved_searches":"\/api[\/:version]\/saved-searches[\/:id]","api_saved_searches_toggle":"\/api[\/:version]\/saved-searches[\/:id]\/toggle","api_saved_searches_toggle_status_alert":"\/api[\/:version]\/saved-searches[\/:id]\/toggle-status-alert","api_saved_searches_count":"\/api[\/:version]\/saved-searches[\/:id]\/count","api_organization_by_slug":"\/api[\/:version]\/organizations\/:slug","api_organization":"\/api[\/:version]\/organizations[\/:id]","api_organization_update_admin":"\/api[\/:version]\/organizations[\/:id]\/update-admin","api_organization_follower":"\/api[\/:version]\/organizations[\/:id]\/followers[\/:followId]","api_organization_followee":"\/api[\/:version]\/organizations[\/:id]\/followees","api_organization_membership":"\/api[\/:version]\/organizations[\/:id]\/memberships","api_organization_employees":"\/api[\/:version]\/organizations[\/:id]\/employees","api_organization_active_job_posting":"\/api[\/:version]\/organizations[\/:id]\/active-job-posting","api_organization_save_job_posting":"\/api[\/:version]\/organizations[\/:id]\/save-job-posting","api_organization_cancel_job_posting":"\/api[\/:version]\/organizations[\/:id]\/cancel-job-posting","api_organization_school_report":"\/api[\/:version]\/organizations[\/:id]\/school-report","api_organization_company_report":"\/api[\/:version]\/organizations[\/:id]\/company-report","api_organization_editor":"\/api[\/:version]\/organizations[\/:id]\/editor","api_organization_editor_save":"\/api[\/:version]\/organizations[\/:id]\/editor\/:action","api_organization_editor_form":"\/api[\/:version]\/organizations[\/:id]\/editor\/form\/:name","api_organization_search_all":"\/api[\/:version]\/organizations[\/:id]\/search-all","api_organization_mentioned_in":"\/api[\/:version]\/organizations[\/:id]\/mentioned-in","api_organization_validate":"\/api[\/:version]\/organizations[\/:id]\/validate","api_organization_approve":"\/api[\/:version]\/organizations[\/:id]\/approve","api_organization_toggle_hidden":"\/api[\/:version]\/organizations[\/:id]\/toggle-hidden","api_organization_business_units_save":"\/api[\/:version]\/organizations[\/:id]\/business-units\/save","api_organization_business_units_deactivate":"\/api[\/:version]\/organizations[\/:id]\/business-units\/deactivate","api_organization_set_fraudulence_level":"\/api[\/:version]\/organizations[\/:id]\/set-fraudulence-level","api_member_by_slug":"\/api[\/:version]\/members\/:slug","api_members":"\/api[\/:version]\/members[\/:id]","api_members_search":"\/api[\/:version]\/members[\/:id]\/search","api_members_reactivate_member":"\/api[\/:version]\/members[\/:id]\/reactivate-member","api_members_followee":"\/api[\/:version]\/members[\/:id]\/followees","api_members_connections":"\/api[\/:version]\/members[\/:id]\/connections[\/:profileConnectionId]","api_members_autoconnect":"\/api[\/:version]\/members[\/:id]\/autoconnect","api_members_pending_connection_requests":"\/api[\/:version]\/members[\/:id]\/pending-connection-requests\/count","api_members_pending_connection_requests_list":"\/api[\/:version]\/members[\/:id]\/pending-connection-requests\/list","api_members_updates":"\/api[\/:version]\/members[\/:id]\/updates","api_members_organization_status":"\/api[\/:version]\/members[\/:id]\/organization-status\/:status","api_members_viewers":"\/api[\/:version]\/members[\/:id]\/viewers","api_members_applications":"\/api[\/:version]\/members[\/:id]\/applications","api_members_attachments":"\/api[\/:version]\/members[\/:id]\/attachments","api_members_last_cv_uploaded":"\/api[\/:version]\/members[\/:id]\/last-cv-uploaded","api_members_cv_review_request":"\/api[\/:version]\/members[\/:id]\/cv-review-request","api_members_forward":"\/api[\/:version]\/members[\/:id]\/forward","api_members_status":"\/api[\/:version]\/members[\/:id]\/status","api_members_notes":"\/api[\/:version]\/members[\/:id]\/notes[\/:noteId]","api_members_matches_job_experience_requirements":"\/api[\/:version]\/members[\/:id]\/matches\/:jobId","api_members_refresh_status":"\/api[\/:version]\/members[\/:id]\/refresh-status","api_members_deactivate":"\/api[\/:version]\/members[\/:id]\/deactivate","api_members_reactivate":"\/api[\/:version]\/members[\/:id]\/reactivate","api_members_send_validation_email":"\/api[\/:version]\/members[\/:id]\/send-validation-email","api_members_ask_for_review":"\/api[\/:version]\/members[\/:id]\/ask-for-review","api_members_toggle_hidden":"\/api[\/:version]\/members[\/:id]\/toggle-hidden","api_members_manage":"\/api[\/:version]\/members[\/:id]\/management\/:action","api_members_editor":"\/api[\/:version]\/members[\/:id]\/editor","api_members_editor_save":"\/api[\/:version]\/members[\/:id]\/editor\/:action","api_members_editor_form":"\/api[\/:version]\/members[\/:id]\/editor\/form\/:name","api_members_mentioned_in":"\/api[\/:version]\/members[\/:id]\/mentioned-in","api_members_settings":"\/api[\/:version]\/members[\/:id]\/settings","api_members_indexation_settings":"\/api[\/:version]\/members[\/:id]\/indexation-settings","api_members_use_second_email":"\/api[\/:version]\/members[\/:id]\/use-second-email","api_members_flag":"\/api[\/:version]\/members[\/:id]\/flag","api_members_import":"\/api[\/:version]\/members[\/:id]\/import[\/:id]\/:action","api_members_create":"\/api[\/:version]\/members[\/:id]\/create","api_members_exists":"\/api[\/:version]\/members[\/:id]\/exists","api_members_judge_certifications":"\/api[\/:version]\/members[\/:id]\/judge-certifications[\/:judgeCertificationId]","api_companies":"\/api[\/:version]\/companies[\/:id]","api_companies_updates":"\/api[\/:version]\/companies[\/:id]\/updates","api_companies_follow_corporates":"\/api[\/:version]\/companies[\/:id]\/follow-corporates","api_companies_search_all":"\/api[\/:version]\/companies[\/:id]\/search-all","api_companies_settings":"\/api[\/:version]\/companies[\/:id]\/settings","api_companies_ads":"\/api[\/:version]\/companies[\/:id]\/ads","api_companies_onboarding":"\/api[\/:version]\/companies[\/:id]\/onboarding","api_companies_onboarding_step":"\/api[\/:version]\/companies[\/:id]\/onboarding\/step","api_companies_onboarding_steps":"\/api[\/:version]\/companies[\/:id]\/onboarding\/steps","api_schools":"\/api[\/:version]\/schools[\/:id]","api_schools_manage_registration_requests":"\/api[\/:version]\/schools[\/:id]\/manage-registration-requests","api_schools_updates":"\/api[\/:version]\/schools[\/:id]\/updates","api_schools_list":"\/api[\/:version]\/schools[\/:id]\/list","api_schools_branding":"\/api[\/:version]\/schools[\/:id]\/branding","api_schools_settings":"\/api[\/:version]\/schools[\/:id]\/settings","api_schools_degrees":"\/api[\/:version]\/schools[\/:id]\/degrees","api_schools_stats":"\/api[\/:version]\/schools[\/:id]\/stats","api_schools_stats_members":"\/api[\/:version]\/schools[\/:id]\/stats\/members","api_schools_stats_traffic":"\/api[\/:version]\/schools[\/:id]\/stats\/traffic","api_schools_stats_recruitment":"\/api[\/:version]\/schools[\/:id]\/stats\/recruitment","api_associations":"\/api[\/:version]\/associations[\/:id]","api_associations_updates":"\/api[\/:version]\/associations[\/:id]\/updates","api_association_connections":"\/api[\/:version]\/association-connections[\/:action]","api_albums":"\/api[\/:version]\/albums[\/:id]","api_albums_upload":"\/api[\/:version]\/albums[\/:id]\/upload","api_album_items":"\/api[\/:version]\/album-items\/:id","api_album_items_share":"\/api[\/:version]\/album-items\/:id\/shares","api_album_items_likes":"\/api[\/:version]\/album-items\/:id\/likes","api_album_items_comments":"\/api[\/:version]\/album-items\/:id\/comments[\/:commentId]","api_events_by_slug":"\/api[\/:version]\/events\/:slug","api_events":"\/api[\/:version]\/events[\/:id]","api_events_attendees":"\/api[\/:version]\/events[\/:id]\/attendees[\/:attendeeId]","api_events_cancel":"\/api[\/:version]\/events[\/:id]\/cancel","api_events_news":"\/api[\/:version]\/events[\/:id]\/news[\/:newsId]","api_events_search_invitations":"\/api[\/:version]\/events[\/:id]\/search-invitations","api_events_invite":"\/api[\/:version]\/events[\/:id]\/invite","api_events_remind":"\/api[\/:version]\/events[\/:id]\/remind","api_events_share":"\/api[\/:version]\/events[\/:id]\/share","api_tags":"\/api[\/:version]\/tags[\/:id]","api_profile_tags":"\/api[\/:version]\/profile-tags[\/:id]","api_profile_tags_grouped_create":"\/api[\/:version]\/profile-tags[\/:id]\/grouped-create","api_notifications_settings":"\/api[\/:version]\/notifications-settings","api_ads":"\/api[\/:version]\/ads[\/:id]","api_ads_close":"\/api[\/:version]\/ads[\/:id]\/close","api_ads_close_hourly":"\/api[\/:version]\/ads[\/:id]\/hourly\/:type\/close","api_ads_views_hourly":"\/api[\/:version]\/ads[\/:id]\/hourly\/:type\/viewed","api_ads_clicks_hourly":"\/api[\/:version]\/ads[\/:id]\/hourly\/:type\/clicked","api_ads_views":"\/api[\/:version]\/ads[\/:id]\/views[\/:viewId]","api_ads_clicks":"\/api[\/:version]\/ads[\/:id]\/clicks[\/:clickId]","api_indexation_settings":"\/api[\/:version]\/indexation-settings","api_saved_jobs_count":"\/api[\/:version]\/saved-jobs[\/:jobId]\/count","api_saved_jobs_create":"\/api[\/:version]\/saved-jobs[\/:jobId]\/create","api_saved_jobs_delete":"\/api[\/:version]\/saved-jobs[\/:jobId]\/delete","api_judge_labels":"\/api[\/:version]\/judge-labels","api_judge_levels":"\/api[\/:version]\/judge-levels","api_judge_categories":"\/api[\/:version]\/judge-categories","api_educations":"\/api[\/:version]\/educations[\/:id]","api_jobs":"\/api[\/:version]\/jobs\/[:id][\/:slug]","api_job_page_sidebar_widgets":"\/api[\/:version]\/job-page-sidebar-widgets\/[:id][\/:slug]","api_job_clicked":"\/api[\/:version]\/jobs\/:id\/clicked","api_job_actions":"\/api[\/:version]\/jobs\/:id\/:action","api_job_share":"\/api[\/:version]\/jobs\/:id\/share","api_job_search":"\/api[\/:version]\/jobs\/search","api_job_search_count":"\/api[\/:version]\/jobs\/search\/count","api_job_light_search":"\/api[\/:version]\/jobs\/light-search","api_applications":"\/api[\/:version]\/applications[\/:applicationId][\/:action]","api_job_applications":"\/api[\/:version]\/jobs\/:jobId\/applications[\/:applicationId][\/:action]","api_toggle_vip":"\/api[\/:version]\/jobs\/toggle-vip","api_jobs_toggle_hidden":"\/api[\/:version]\/jobs\/toggle-hidden","api_save_search":"\/api[\/:version]\/job\/save-search","api_hiring_event":"\/api[\/:version]\/hiring-event[\/:id][\/:action]","api_suggested_job_title":"\/api[\/:version]\/suggested-job-titles\/[:action]","api_job_title_synonym":"\/api[\/:version]\/job-title-synonym\/[:action]","api_job_suggested_jobs":"\/api[\/:version]\/jobs\/:id\/suggested-jobs","api_job_seo_term":"\/api[\/:version]\/jobs\/seo-term\/[:slug][\/:slug2]","api_branding_get":"\/api[\/:version]\/brandings\/:path","api_branding":"\/api[\/:version]\/organizations\/:organization\/branding","api_branding_activation":"\/api[\/:version]\/organizations\/:organization\/branding\/activation","api_branding_image":"\/api[\/:version]\/organizations\/:organization\/branding\/image","api_news":"\/api[\/:version]\/news[\/:id]","api_news_share":"\/api[\/:version]\/news[\/:id]\/shares","api_news_like":"\/api[\/:version]\/news[\/:id]\/likes","api_news_comment":"\/api[\/:version]\/news[\/:id]\/comments[\/:commentId]","api_news_email":"\/api[\/:version]\/news[\/:id]\/email","api_conversation":"\/api[\/:version]\/conversations[\/:id]","api_conversation_message":"\/api[\/:version]\/conversations[\/:id]\/messages[\/:messageId]","api_conversation_message_count":"\/api[\/:version]\/conversations[\/:id]\/messages[\/:messageId]\/count","api_conversation_template":"\/api[\/:version]\/conversations[\/:id]\/templates[\/:templateId]","api_conversation_search_profiles":"\/api[\/:version]\/conversations[\/:id]\/search-profiles","api_conversation_enhanced":"\/api[\/:version]\/conversations[\/:id]\/enhanced","api_conversation_count_participants":"\/api[\/:version]\/conversations[\/:id]\/count-participants","api_conversation_mark":"\/api[\/:version]\/conversations[\/:id]\/mark","api_shop_membership_premium_list":"\/api[\/:version]\/shop\/membership\/premium","api_shop_membership_membership_list":"\/api[\/:version]\/shop\/membership\/list","api_shop_membership_company_types_list":"\/api[\/:version]\/shop\/membership\/company-types-list","api_shop_membership_school_types_list":"\/api[\/:version]\/shop\/membership\/school-types-list","api_shop_membership_payment":"\/api[\/:version]\/shop\/membership\/payment","api_shop_essec_membership_payment":"\/api[\/:version]\/shop\/essec-membership\/payment\/:action[\/:plan][\/:param]","api_shop_essec_membership_cancel_recurring":"\/api[\/:version]\/shop\/essec-membership\/cancel-recurring","api_shop_essec_membership_list":"\/api[\/:version]\/shop\/essec-membership\/list","api_shop_essec_membership_current":"\/api[\/:version]\/shop\/essec-membership\/current","root":"\/","status":"\/status\/","metrics":"\/metrics","mobile_settings":"\/mobile-settings\/","index":"\/:locale\/","etudiants_france":"\/etudiant[s]-france","microsoft_redirect":"\/microsoft-redirect","sitemap_index":"\/sitemap.xml","sitemap":"\/sitemaps\/:path","invite":"\/invite[\/:id]","home":"\/:locale\/","home_redirect_page":"\/:locale\/:page","home_redirect_home_page":"\/:locale\/\/","home_index":"\/:locale\/:page\/","home_terms_agreement":"\/:locale\/terms-agreement","home_register":"\/:locale\/register","home_register_signup":"\/:locale\/register\/signup","home_register_import_signup":"\/:locale\/register\/import-signup","home_register_facebook_signup":"\/:locale\/register\/facebook-signup","home_register_linkedin_signup":"\/:locale\/register\/linkedin-signup","home_register_linkedin_auth":"\/:locale\/register\/linkedin-auth","home_imported_member_signup":"\/:locale\/imported-member-signup\/:token","home_lcb_rules_and_guidelines":"\/:locale\/lcb-rules-and-guidelines\/","home_advertise_jobs":"\/:locale\/:slug","home_advertise_jobs_dynamic":"\/:locale\/:slug\/:location\/:segment","home_company_register":"\/:locale\/company-register","home_private_home":"\/:locale\/home[\/]","home_contact":"\/:locale\/contact[\/:action]","home_complete_signup":"\/:locale\/complete-signup[\/:token]","notification":"\/:locale","notification_index":"\/:locale\/notifications","notification_unsubscribe":"\/:locale\/notifications\/unsubscribe\/:notificationHash[\/:email]","notification_subscribe":"\/:locale\/notifications\/subscribe\/:type\/:email\/:hash","notification_unsubscribe_external":"\/:locale\/notifications\/unsubscribe\/external\/:type\/:email\/:hash","notification_view":"\/:locale\/notifications\/online\/:id\/:email","map":"\/map-view","map_view":"\/map-view\/index[\/:action]","channel":"\/channel\/:id","v_map":"\/map\/:action[\/:organizationSlug]","directoryMap":"\/map\/directory\/:type[\/:schoolId]","v_channel":"\/tv-channel\/:id","settings":"\/:locale\/settings","settings_account":"\/:locale\/settings\/account","settings_notifications":"\/:locale\/settings\/notifications","settings_tv_display":"\/:locale\/settings\/tv-display","settings_social_feed":"\/:locale\/settings\/social-feed","settings_language":"\/:locale\/settings\/language\/:language","analytics":"\/:locale\/analytics","analytics_tab":"\/:locale\/analytics\/:action[\/:format]","support_center":"\/:locale\/support-center\/:action","support_center_guide":"\/:locale\/support-center\/:action\/:id","support_center_play":"\/:locale\/support-center\/:action\/:article\/:video","member":"\/:locale\/","member_view":"\/:locale\/member[\/:slug]","member_pdf":"\/:locale\/member\/pdf[\/:slug]","member_updates":"\/:locale\/member\/updates[\/:slug]","member_report":"\/:locale\/member\/report","member_directory":"\/:locale\/directory\/members[\/:action]","member_export":"\/:locale\/directory\/members\/search-export","member_working_at":"\/:locale\/directory\/members\/working-at\/:slug","member_students_alumni":"\/:locale\/directory\/members\/from\/:slug","member_association_members":"\/:locale\/directory\/members\/association\/:slug","member_locals":"\/:locale\/directory\/members\/in\/:slug","member_members_by_name":"\/:locale\/directory\/members\/name\/:slug","member_connection":"\/:locale\/connections\/:id\/:action","member_pending_connections":"\/:locale\/pending-connections","member_remove_recommendation":"\/:locale\/\/remove-recommendation\/:id","member_organization_status":"\/:locale\/member\/:id\/organization-status\/:status","member_privacy_setting":"\/:locale\/privacy-setting\/:privacy","member_language":"\/:locale\/language\/:lang[\/:level]","member_validate_email":"\/:locale\/member\/validate-email\/:token","company":"\/:locale\/","company_index":"\/:locale\/company[\/:action]","company_view":"\/:locale\/company\/:slug","company_view_albums":"\/:locale\/company\/:slug\/albums","company_view_albums_item":"\/:locale\/company\/:slug\/albums#!\/:albumId[\/:itemId]","company_view_corporate":"\/:locale\/company\/:slug\/corporate\/:blockSlug","company_directory":"\/:locale\/directory\/companies[\/:action]","association":"\/:locale\/","association_index":"\/:locale\/association[\/:action]","association_view":"\/:locale\/association\/:slug","association_view_albums":"\/:locale\/association\/:slug\/albums","association_view_albums_item":"\/:locale\/association\/:slug\/albums#!\/:albumId[\/:itemId]","association_connection":"\/:locale\/association\/connections\/:id\/:action","association_directory":"\/:locale\/directory\/communities[\/:action]","school":"\/:locale\/","school_index":"\/:locale\/school[\/:action]","school_view":"\/:locale\/school\/:slug","school_view_albums":"\/:locale\/school\/:slug\/albums","school_view_albums_item":"\/:locale\/school\/:slug\/albums#!\/:albumId[\/:itemId]","school_view_events":"\/:locale\/school\/:slug\/events","school_directory":"\/:locale\/directory\/schools[\/:action]","school_group_directory":"\/:locale\/directory\/schools\/part-of\/:slug","event":"\/:locale\/event\/:slug","event_export":"\/:locale\/event\/:slug\/export","event_attend":"\/:locale\/event\/:slug\/attend\/:action","permission_management":"\/:locale\/permission-management[\/:action]","student_import":"\/:locale\/student-import\/","plus":"\/:locale\/advice[\/]","plus_video":"\/:locale\/advice[\/]video\/:slug[\/]","plus_article":"\/:locale\/advice[\/]article\/:slug[\/]","cms_wordpress":"\/advice\/:locale[\/]","cms_wordpress_video":"\/advice\/:locale[\/]video\/:slug[\/]","cms_wordpress_article":"\/advice\/:locale[\/]article\/:slug[\/]","cms_wordpress_mobile":"\/advice\/wp-json\/wp\/:version\/:slug","lego_courses":"\/:locale[\/]courses[\/]","lego_courses_view":"\/:locale[\/]courses[\/]:slug[\/]","lego_courses_management_leads":"\/:locale[\/]courses-management[\/]leads","lego_my_plan":"\/:locale[\/]my-plan","legacy":"\/","legacy_home":"\/:locale[\/]","legacy_myschool":"\/en\/directory\/index\/myschool[\/]","legacy_old_home":"\/en\/home\/index[\/]","legacy_old_faq":"\/en\/faq[\/]","legacy_old_account_edit":"\/en\/account\/index\/edit[\/]","legacy_old_account_create":"\/en\/account\/index\/create[\/]","legacy_old_login":"\/en\/account\/login\/login[\/]","legacy_old_member_directory":"\/en\/directory\/index\/students[\/]","legacy_old_company_directory":"\/en\/directory\/index\/companies[\/]","legacy_old_school_directory":"\/en\/directory\/index\/schools[\/]","legacy_old_job_directory":"\/en\/job\/offer\/list[\/]","legacy_home_static_pages":"\/[en\/]index\/:page[\/]","legacy_advertise_jobs_signup":"\/:locale\/company-register\/signup[\/]","legacy_advertise_jobs_for_employers":"\/:locale\/[for-]employers[\/]","legacy_advertise_jobs_schools":"\/:locale\/index\/schools[\/]","legacy_advertise_jobs_employers":"\/:locale\/home\/index\/employers","legacy_old_plus":"\/en\/article\/index\/index[\/]","legacy_old_plus__":"\/en\/plus[\/]","legacy_plus_item_without_lang":"\/advice\/:type\/:slug[\/]","legacy_plus_item":"\/en\/plus\/index\/:type[\/]","legacy_profile_without_lang":"\/:type\/:slug[\/]","legacy_old_register":"\/en\/register\/index[\/index]","legacy_old_inbox":"\/en\/messaging\/index[\/index]","legacy_doctrine":"\/ocra_service_manager_yuml","legacy_students_listing":"\/en\/directory\/index\/students","legacy_schools":"\/en\/home\/index\/schools","legacy_about_us":"\/en\/home\/index\/about-us","legacy_contact_us":"\/en\/request\/index\/ask-question","legacy_reset_password":"\/en\/account\/login\/retrieve-password","legacy_browse_members_by_name":"\/en\/browse-members\/letter\/:letter[\/:page]","legacy_browse_members_by_school":"\/en\/browse-members\/school\/:letter","legacy_browse_companies":"\/:locale\/browse-companies[\/:firstLevel]","legacy_browse_schools":"\/:locale\/browse-schools[\/:firstLevel]","legacy_browse_members":"\/:locale\/browse-members","legacy_profile":"\/en\/:type\/:id","legacy_album":"\/en\/profile\/index\/albums","legacy_team":"\/en\/profile\/index\/team","legacy_job":"\/job[\/:slug]","legacy_old_school":"\/:locale\/school\/:slug","legacy_old_branding":"\/en\/branding\/index\/index","legacy_old_widget":"\/hash[\/:hash]","legacy_old_widget_":"\/widget[\/:index]","legacy_very_old_job_view":"\/en\/job\/offer\/public-view\/id\/:id","legacy_old_job_view":"\/en\/job\/offer\/view","legacy_feed_job_view":"\/job\/[:id]","legacy_jobs":"\/:type","legacy_jobs_company":"\/:type\/at\/:slug[\/:keyword]","legacy_jobs_location":"\/:type\/in\/:slug[\/:keyword]","legacy_jobs_keyword":"\/:type\/:slug","old_version_view":"\/:locale\/old-version[\/:slug]","job_view":"\/:locale\/job[\/:slug]","job_candidates":"\/:locale\/job\/candidates[\/:slug]","job_pdf":"\/:locale\/job\/pdf[\/:slug]","job_create":"\/:locale\/job\/create[\/:freeTargetedOffer]","job_edit":"\/:locale\/job\/edit[\/:id]","job_duplicate":"\/:locale\/job\/duplicate[\/:id][\/:duplicate]","job_index":"\/:locale\/directory\/jobs[\/:action][\/:id]","job_indeed_feed":"\/:locale\/job\/offer\/indeed-xml-export[\/:version]","job_criteo_feed":"\/:locale\/job\/offer\/criteo-xml-export","job_seg_feed":"\/:locale\/job\/offer\/seg-xml-export","job_facebook_feed":"\/:locale\/feed\/facebook","job_google_feed":"\/:locale\/feed\/google","job_pole_emploi_feed":"\/:locale\/feed\/pole-emploi","job_rolling_pin_feed":"\/:locale\/feed\/rolling-pin","job_suggested_job_title":"\/:locale\/suggested-job-titles\/:action","job_job_title_synonym":"\/:locale\/job-title-synonym\/:action","jobs":"\/:locale\/:type","jobs_company":"\/:locale\/:type\/at\/:slug[\/:keyword]","jobs_location":"\/:locale\/:type\/in\/:slug[\/:keyword]","jobs_keyword":"\/:locale\/:type\/:slug","browse_jobs":"\/:locale\/browse-:type","browse_jobs_company":"\/:locale\/browse-:type\/company","browse_jobs_company_keyword":"\/:locale\/browse-:type\/company\/:slug","browse_jobs_location":"\/:locale\/browse-:type\/location","browse_jobs_location_keyword":"\/:locale\/browse-:type\/location\/:slug","browse_jobs_department":"\/:locale\/browse-:type\/department","browse_jobs_department_location":"\/:locale\/browse-:type\/department\/in\/:slug","browse_jobs_department_company":"\/:locale\/browse-:type\/department\/at\/:slug","browse_jobs_title":"\/:locale\/browse-:type\/title","browse_jobs_title_location":"\/:locale\/browse-:type\/title\/in\/:slug","browse_jobs_title_company":"\/:locale\/browse-:type\/title\/at\/:slug","accor":"\/accor\/:action","blp_editor_preview":"\/:locale\/blp-editor\/preview","viewer":"\/:locale\/viewer","viewer_pdf":"\/:locale\/viewer\/pdf","news":"\/:locale","news_view":"\/:locale\/newsfeed\/status\/:id","inbox":"\/:locale\/inbox","inbox_contact":"\/:locale\/inbox\/contact\/:contactId","inbox_conversation":"\/:locale\/inbox\/conversation\/:conversationId","inbox_job":"\/:locale\/inbox\/job[\/:jobSlug]","custom_payment":"\/:locale\/checkout\/payment\/custom","custom_payment_payment":"\/:locale\/checkout\/payment\/custom\/payment","shop":"\/:locale\/shop[\/:membershipId][\/:draftId]","widgets":"\/:locale\/widgets","widgets_settings":"\/:locale\/widgets\/settings","widgets_all_jobs":"\/:locale\/widgets\/all-jobs","widgets_widget":"\/:locale\/widgets\/:action\/:hash","clear_cache":"\/cache\/:action"})
+        .value('_organizationAdministrator', null)
+        .value('_brandingData', null)
+        .value('_brandingEditMode', false)
+        .value('_user', {"id":5576505,"first_name":"Sena","name":"Sena AKPABLY","username":"stevekomla@gmail.com","is_full_profile":false,"slug":"sena-akpably","avatar":"https:\/\/www.hosco.com\/images\/assets\/pictures\/thumb-user-badge.png","type":"member","premiumSchoolIds":[],"registration_step":"l","flags":[],"allow_indexation":null,"onboarding":null,"is_alumni":false});
+    })();
+
+(function() {
+    angular.module('Hosco.errorHandler')
+        .constant('TRACK_ERRORS', false);
+    })();
+</script>
+        <script type="application/ld+json">
+[{
+    "@id": "https:\/\/www.hosco.com\/en\/terms-and-conditions\/",
+    "@context": "https:\/\/schema.org",
+    "@type": "WebPage",
+    "url": "https:\/\/www.hosco.com\/en\/terms-and-conditions\/",
+    "name": "Terms \u0026 Conditions",
+    "description": "Hosco Terms \u0026 Conditions"
+}, {
+    "@context": "https:\/\/schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/www.hosco.com\/en\/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms \u0026amp; Conditions",
+            "item": "https:\/\/www.hosco.com\/en\/terms-and-conditions\/"
+        }
+    ]
+}]
+</script>
+                    <hosco-mobile-banner id="hosco-mobile-banner-container"></hosco-mobile-banner>
+                <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5a47cda728","applicationID":"55961305","transactionName":"YFIAZRZQXksCVUcPCVkYI1IQWF9WTF5cCwMYXgxVAUk=","queueTime":0,"applicationTime":519,"atts":"TBUDE15KTUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
